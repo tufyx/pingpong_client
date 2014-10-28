@@ -56,10 +56,6 @@ app.controller('PlayersController', function($scope,$http){
 		$http.get(url)
 	    	.success(function(data, status, headers, config) {
 	    		this.players = data['response'];
-	    		for (el in this.referees) {
-	    			this.referees[el]['imageURL'] = IMAGES + this.referees[el]['image'];
-	    			this.referees[el]['selected'] = false;
-	    		}
 	    	}.bind(this))
 	    	.error(function(data, status, headers, config) {
 	    		console.log(config);
@@ -71,14 +67,6 @@ app.controller('PlayersController', function($scope,$http){
 		switch (action) {
 	  		case "add":
 	  			this.player = null;
-	  			break;
-	  		case "edit":
-	  			for (el in this.players) {
-	  				if(this.players[el]['selected']) {
-	  					this.player = this.players[el];
-	  				}
-	  			}
-	  			this.buttonTitle = "Edit";
 	  			break;
 		}
 		this.setFormVisible(true);
