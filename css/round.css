@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+
+.team {
+	width: 215px;
+	height: 30px;
+	padding: 5px;
+	background-color: #DDDDDD;
+	color: #000000;
+}
+
+.winner {
+	font-weight:bold;
+}
+
+.round {
+    float: left;
+    margin: 5px;
+    
+	margin-bottom: -99999px;
+	padding-bottom: 99999px;
+}
+
+.round_container {
+    margin-right: auto;
+    overflow: hidden;
+}

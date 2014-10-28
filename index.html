@@ -1,0 +1,52 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<base href="/PingPongClient/"></base>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<!-- Latest compiled and minified jQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+		<script type="text/javascript" src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
+		<script type="text/javascript" src="js/angular-file-upload/angular-file-upload.min.js"></script>
+		
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/round.css">
+		
+		<script type="text/javascript" src="js/configuration.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		
+		<script type="text/javascript" src="js/controllers.js"></script>
+		<script type="text/javascript" src="js/dpcontroller.js"></script>
+		
+		<script type="text/javascript" src="js/players.js"></script>
+		<script type="text/javascript" src="js/fixtures.js"></script>
+		<script type="text/javascript" src="js/round.js"></script>
+		<script type="text/javascript" src="js/userprofile.js"></script>
+		
+		<title>Ping Pong</title>
+	</head>
+<body ng-app="pingpPongApp">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="index.html"><img src="assets/pingpong_icon.png"/> TMG Open</a>
+	    </div>
+	    <main-navigation class="header"></main-navigation>
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<div class="header-right">
+		<ng-view></ng-view>
+	</div>
+</body>
+</html>

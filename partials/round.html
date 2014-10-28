@@ -1,0 +1,25 @@
+<div ng-repeat="match in roundCtrl.matches">
+	<div style="background-color: #FFFFFF; border-style:solid; border-width: 1px; border-color: #FFFFFF">
+		<div class="team" style="opacity:1; margin-top:{{match.offset * 37}}px;">
+			{{match.player_a_name}}
+			<div style="float:right; text-align:right;">
+				<label ng-repeat="result in match.result">
+					{{result.result_a}}&nbsp;
+				</label>
+			</div>
+		</div>
+		<!-- <div style="opacity:0.5; height:{{match.height * 30}}px"></div> -->
+		<!-- SPACER BETWEEN TWO PLAYERS -->
+		<div style="opacity:0.5; height:2px"></div>
+		<div class="team" style="opacity:1; margin-bottom:{{match.offset * 37}}px">
+			{{match.player_b_name}}
+			<div style="float:right; text-align: right">
+				<label ng-repeat="result in match.result">
+					{{result.result_b}}&nbsp; 
+				</label>
+			</div>
+		</div>
+		<!-- SPACER BETWEEN TWO MATCHES -->
+		<div style="opacity:0.5; height: 10px"></div>
+	</div>
+</div>

@@ -1,0 +1,7 @@
+<div class="container">
+	<ul class="nav nav-pills">
+		<li ng-repeat="entry in main.entries" ng-class="{active: $index == main.getMenuEntry()}">
+			<a href="http://dev.tufyx.com/PingPongClient/{{entry.path}}" ng-click="main.setMenuEntry(entry.id)">{{entry.name}}</a>
+	    </li>
+	</ul>
+</div>

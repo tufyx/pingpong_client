@@ -1,0 +1,48 @@
+<div class="section">
+	<h1>Registered Players</h1>
+	<div class="button-bar">
+		<div class="btn-group">
+  			<button class="btn btn-default btn-info mybutton" ng-click="playersCtrl.openForm('add')">Register</button>
+  		</div>
+	</div>
+	
+	
+	<div class="alert" ng-class="{'alert-success': playersCtrl.displaySuccess, 'alert-danger': playersCtrl.displayError}" role="alert" ng-show="playersCtrl.getDisplayAlert()">
+		{{playersCtrl.notificationMessage}}
+	</div>
+	
+	<div class="add-edit-form sample-show-hide" ng-show="playersCtrl.getFormVisible()">
+		<form name="registration" novalidate="novalidate" role="form">
+			<div class="form-group">
+				<label for="refereeEmail">Email:</label>
+			    <input type="email" name="email" class="form-control" id="playerEmail" 
+			    		placeholder="Enter email" ng-model="playersCtrl.player.email" required>
+		  	</div>
+		  	<div class="form-group">
+			    <label for="refereeEmail">First name:</label>
+			    <input type="text" class="form-control" id="playerFirstName" placeholder="Enter first name" ng-model="playersCtrl.player.first_name" required>
+		  	</div>
+		  	<div class="form-group">
+			    <label for="refereeEmail">Last name:</label>
+			    <input type="text" class="form-control" id="playerLastName" placeholder="Enter last name" ng-model="playersCtrl.player.last_name" required>
+		  	</div>
+		  	<button class="btn btn-default mybutton" ng-click="playersCtrl.addPlayer()">Add</button>
+		  	<button class="btn btn-default mybutton" ng-click="playersCtrl.displayAlert = false; playersCtrl.setFormVisible(false)">Cancel</button>
+		</form>
+	</div>
+	
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="player in playersCtrl.players">
+				<td><a href="#/user/view/{{player.id}}">{{player.first_name}} {{player.last_name}}</a></td>
+				<td>{{player.email}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
